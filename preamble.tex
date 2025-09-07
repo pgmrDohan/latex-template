@@ -1,0 +1,72 @@
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{bm}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=2.54cm,
+ right=2.54cm,
+ top=3cm,
+ bottom=2.54cm,
+}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage[american]{circuitikz}
+\ctikzset{logic ports=ieee}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\setlength{\parindent}{24pt}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning, calc, intersections}
+\usepackage[hangul]{kotex}
+\usepackage[HWP]{dhucs-interword}
+\usehangulfontspec{default}
+\usepackage[list=off]{bicaption}
+\captionsetup[table][bi-second]{name=Table}
+\captionsetup[figure][bi-second]{name=Figure}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\makeatletter
+\patchcmd{\thebibliography}{\chapter*{\bibname}}{\section*{\bibname}}{}{}
+\makeatother
+
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\Roman{section}}{10pt}{\vspace{-0.3cm}}
+
+\renewcommand*{\Authand}{, }
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand*\contentsname{\centering \LARGE \noindent \textbf{목 \-\ 차} \vspace{-1cm}}
+\providecommand{\keywords}[2][키워드]{#1--- #2}
+\setstretch{1.4}
+\setlength{\columnsep}{2em}
+\setlength{\columnseprule}{0pt}
+\setlist{nosep, leftmargin=24pt}
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\normalsize\thesection.\arabic{subsection}}
+\makeatletter
+\def\@makeschapterhead#1{
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\renewenvironment{abstract}[1][초 \-\ 록]
+  {
+   \begin{center}
+     \large\textbf{#1}
+     \vspace{-0.3cm}
+   \end{center}
+   \noindent\hspace{\parindent}%
+  }
+  {\par\medskip}

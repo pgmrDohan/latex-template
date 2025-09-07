@@ -1,0 +1,20 @@
+\RequirePackage{fix-cm}
+\documentclass[10pt,a4paper,notitlepage]{report}
+
+\input{preamble}
+
+\begin{document}
+
+\input{cover}
+
+\begin{multicols*}{2}
+  \input{sections/intro}
+  \input{sections/contents}
+  \input{sections/conclusion}
+\end{multicols*}
+
+\newpage
+\section{참고문헌}
+\input{references}
+
+\end{document}
