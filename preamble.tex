@@ -23,6 +23,7 @@
 \usepackage[hangul]{kotex}
 \usepackage[HWP]{dhucs-interword}
 \usehangulfontspec{default}
+\usepackage{adjustbox}
 \usepackage[list=off]{bicaption}
 \captionsetup[table][bi-second]{name=Table}
 \captionsetup[figure][bi-second]{name=Figure}
@@ -34,6 +35,24 @@
 \usepackage{etoolbox}
 \usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\renewcommand{\lstlistingname}{코드}
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=5pt,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b
+}
 
 \makeatletter
 \patchcmd{\thebibliography}{\chapter*{\bibname}}{\section*{\bibname}}{}{}
@@ -54,7 +73,7 @@
 \renewcommand\thesubsection{\normalsize\thesection.\arabic{subsection}}
 \makeatletter
 \def\@makeschapterhead#1{
-  {\parindent \z@ \raggedright
+  {\parindent\z@\raggedright
     \normalfont
     \interlinepenalty\@M
     \Huge \bfseries  #1\par\nobreak
